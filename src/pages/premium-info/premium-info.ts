@@ -11,7 +11,7 @@ import {Camera} from 'ionic-native';
 export class PremiumInfoPage {
 
   public base64Image: string;
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private premiumCalculator: PremiumCalculator) {}
 
