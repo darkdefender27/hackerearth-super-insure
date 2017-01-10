@@ -9,6 +9,7 @@ import { UserDetailsPage } from '../pages/user-details/user-details';
 import { PremiumInfoPage } from '../pages/premium-info/premium-info';
 
 import { GithubUsers } from '../providers/github-users';
+import { PremiumCalculator } from '../providers/premium-calculator';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,6 @@ import { GithubUsers } from '../providers/github-users';
     UserDetailsPage,
     PremiumInfoPage
   ],
-  providers: [GithubUsers]
+  providers: [GithubUsers, PremiumCalculator]
 })
 export class AppModule {}
