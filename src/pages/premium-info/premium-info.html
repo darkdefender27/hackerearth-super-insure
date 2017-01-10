@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Premium Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      Hello World, this is my camera app
+
+      <ul>
+        <li>
+          <button ion-button (click)="takePicture()">Take a Picture</button>
+        </li>
+        <li *ngIf="base64Image">
+          Latest Picture:
+          <img [src]="base64Image" />
+        </li>
+      </ul>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
