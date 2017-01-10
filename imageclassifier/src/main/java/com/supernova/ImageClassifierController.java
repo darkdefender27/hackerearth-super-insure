@@ -23,13 +23,18 @@ public class ImageClassifierController {
     try {
       byte[] imageBytes = Base64.getDecoder().decode(image);
       ImageClassifier imageClassifier = ImageClassifier.getInstance();
-      List<EntityAnnotation> result = imageClassifier.labelImage(imageBytes, 1);
+      List<EntityAnnotation> result = imageClassifier.labelImage(imageBytes, 10);
       if(result == null || result.isEmpty()) {
         return null;
       }
+      System.out.println("Image classification is : ");
+      for(EntityAnnotation entityAnnotation : result) {
+        System.out.println(entityAnnotation.getDescription() + "\t" + entityAnnotation.getScore());
+      }
       return result.get(0).getDescription();
     } catch (Exception e) {
-      throw new RuntimeException(e);
+      System.out.println(e.getMessage());
+      return null;
     }
   }
 
