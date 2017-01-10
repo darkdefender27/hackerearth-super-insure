@@ -7,6 +7,7 @@ import { StatusBar } from 'ionic-native';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
+import { PremiumInfoPage } from '../pages/premium-info/premium-info';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,6 +27,7 @@ export class MyApp {
       { title: 'Users', component: UsersPage },
       { title: 'Repos', component: ReposPage },
       { title: 'Organisations', component: OrganisationsPage },
+      { title: 'Premium Calculator', component: PremiumInfoPage }
     ];
   }
 
