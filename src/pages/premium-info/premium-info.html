@@ -10,20 +10,44 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-content>
-      Hello World, this is my camera app
 
-      <ul>
-        <li>
-          <button ion-button (click)="takePicture()">Take a Picture</button>
-        </li>
-        <li *ngIf="base64Image">
-          Latest Picture:
-          <img [src]="base64Image" />
-        </li>
-      </ul>
+  <ion-card>
+    <ion-card-header>
+      <!-- Advanced: explicity set the icon for each platform -->
+      <!--<ion-icon ios="ios-aperture" md="md-aperture" item-left></ion-icon>-->
+      Please capture an object.
+    </ion-card-header>
+
+    <ion-card-content>
+      <button ion-button round (click)="takePicture()" item-center>Take a Picture</button>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card *ngIf="base64Image">
+    <ion-item>
+      <h2>Recent image captured</h2>
+    </ion-item>
+
+    <img [src]="base64Image" />
+
+    <ion-card-content *ngIf="premiumInfo">
+
+      <ion-item-group>
+        <ion-item-divider color="light">Object Details</ion-item-divider>
+        <ion-item>Object Type : {{premiumInfo.objectName}}</ion-item>
+        <ion-item>Object Worth : {{premiumInfo.objectWorth}}</ion-item>
+        <ion-item>*Predicted Premium : {{premiumInfo.predictedPremium}}</ion-item>
+      </ion-item-group>
 
     </ion-card-content>
+
+    <ion-card-content *ngIf="!premiumInfo">
+      <p>Failed to load the Premium predictions...</p>
+    </ion-card-content>
+
   </ion-card>
+
 </ion-content>
+

@@ -12,8 +12,4 @@ export class UserDetailsPage {
   constructor(public navCtrl: NavController, private navParams: NavParams) {
     this.login = this.navParams.get('login');
   }
-
-  ionViewDidLoad() {
-    console.log('Hello UserDetails Page');
-  }
 }

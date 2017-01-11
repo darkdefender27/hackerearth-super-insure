@@ -19,10 +19,6 @@ export class UsersPage {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('Hello Users Page');
-  }
-
   goToDetails(login: string) {
     this.navCtrl.push(UserDetailsPage, {login});
   }

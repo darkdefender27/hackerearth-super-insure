@@ -9,7 +9,4 @@ export class OrganisationsPage {
 
   constructor(public navCtrl: NavController) {}
 
-  ionViewDidLoad() {
-    console.log('Hello Organisations Page');
-  }
 }

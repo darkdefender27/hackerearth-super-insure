@@ -25,8 +25,6 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Users', component: UsersPage },
-      { title: 'Repos', component: ReposPage },
-      { title: 'Organisations', component: OrganisationsPage },
       { title: 'Premium Calculator', component: PremiumInfoPage }
     ];
   }
